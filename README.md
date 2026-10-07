@@ -55,7 +55,8 @@ pip install ultralytics albumentations pycocotools torch torchvision opencv-pyth
 You can automatically download and extract the dataset using the included script:
 
 ```bash
-python download_coco2017.py --output-dir ./datasets/coco
+cd datasets
+python download_coco2017.py 
 ```
 
 Or manually extract COCO 2017 so that the directory matches:
