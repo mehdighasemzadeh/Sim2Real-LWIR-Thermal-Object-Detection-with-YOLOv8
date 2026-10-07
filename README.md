@@ -11,16 +11,9 @@ The resulting models are designed with both **computer-vision performance and ed
 ---
 
 ## 🎥 Demo
-
 The following video demonstrates the final thermal object detection models on real **FLIR ADAS thermal imagery**.
-
-**YOLOv8 Nano and YOLOv8 Small — Stage 2 real-thermal fine-tuned models**
-
 <p align="center">
-  <video src="./videos/test.gif" controls width="900">
-    Your browser does not support embedded videos.
-    <a href="./videos/test.mp4">View the demo video</a>.
-  </video>
+  <img src="videos/test.gif" width="900">
 </p>
 
 > **Demo:** Real LWIR thermal detection after Sim2Real training and fine-tuning on the FLIR ADAS dataset.
