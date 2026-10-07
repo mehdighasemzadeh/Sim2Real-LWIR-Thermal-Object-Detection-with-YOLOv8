@@ -21,11 +21,11 @@ The architecture bridges the domain gap between visible (RGB) and Long-Wave Infr
 ```text
 .
 ├── README.md                                # Comprehensive documentation
-├── FLIR_DATASET_GUIDE.md                   # Guide for manual FLIR dataset setup
-├── download_coco2017.py                    # COCO 2017 downloader & extractor
-├── yolov8_5_class_lwir_fine_tuning_v2.py  # Stage 1: Synthetic LWIR pre-training
-├── flir_real_thermal_yolov8_fine_tuning.py # Stage 2: Data prep & real thermal fine-tuning
-└── datasets/                               # Local dataset root (excluded from Git)
+├── FLIR_DATASET_GUIDE.md                    # Guide for manual FLIR dataset setup
+├── stage_1_training_script.py               # Stage 1: Synthetic LWIR pre-training
+├── stage_2_training_script.py               # Stage 2: Data prep & real thermal fine-tuning
+└── datasets/                                # Local dataset root (excluded from Git)
+    download_coco2017.py                     # COCO 2017 downloader & extractor
     ├── coco/
     │   ├── annotations/
     │   ├── train2017/
