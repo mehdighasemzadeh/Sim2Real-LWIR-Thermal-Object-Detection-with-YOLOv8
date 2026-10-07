@@ -1,4 +1,3 @@
-# Sim2Real-LWIR-Thermal-Object-Detection-with-YOLOv8
 # Dual-Stage Thermal Vision YOLOv8 Pipeline
 
 This repository provides an end-to-end framework for domain-adapted thermal object detection using **YOLOv8 Nano** and **YOLOv8 Small**. 
