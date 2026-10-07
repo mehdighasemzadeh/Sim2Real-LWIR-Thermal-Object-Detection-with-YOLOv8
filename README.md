@@ -90,7 +90,7 @@ Follow the step-by-step instructions in [`FLIR_DATASET_GUIDE.md`](./FLIR_DATASET
 Train YOLOv8 Nano and Small on COCO 2017 with dynamic synthetic LWIR augmentations:
 
 ```bash
-python yolov8_5_class_lwir_fine_tuning_v2.py \
+python stage_1_training_script.py \
     --coco-root ./datasets/coco \
     --output-dir ./output/coco_5cls_lwir_aerial \
     --epochs 200 \
@@ -105,7 +105,7 @@ python yolov8_5_class_lwir_fine_tuning_v2.py \
 If you only want to parse COCO JSON annotations, apply class mapping, and generate YOLO `.txt` labels without starting model training:
 
 ```bash
-python flir_real_thermal_yolov8_fine_tuning.py \
+python stage_2_training_script.py \
     --flir-root ./datasets/FLIR_ADAS \
     --output-dir ./output/flir_5cls_yolov8_finetuned \
     --prep-only
@@ -115,7 +115,7 @@ python flir_real_thermal_yolov8_fine_tuning.py \
 Run full data conversion, oversampling, and Stage 2 fine-tuning using the Stage 1 pretrained weights:
 
 ```bash
-python flir_real_thermal_yolov8_fine_tuning.py \
+python stage_2_training_script.py \
     --flir-root ./datasets/FLIR_ADAS \
     --output-dir ./output/flir_5cls_yolov8_finetuned \
     --weights-nano ./output/coco_5cls_lwir_aerial/yolov8_thermal_quadcopter/yolov8n_lwir_aerial_5cls/weights/best.pt \
@@ -127,7 +127,7 @@ python flir_real_thermal_yolov8_fine_tuning.py \
 
 ## Command Line Arguments Reference
 
-### `yolov8_5_class_lwir_fine_tuning_v2.py` (Stage 1)
+### `stage_1_training_script.py` (Stage 1)
 | Argument | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `--coco-root` | `str` | `./datasets/coco` | Path to COCO dataset root directory |
@@ -137,7 +137,7 @@ python flir_real_thermal_yolov8_fine_tuning.py \
 | `--polarity` | `str` | `white` | Thermal polarity (`white` for White-Hot, `black` for Black-Hot) |
 | `--force-rebuild` | flag | `False` | Force reprocessing of transformed images |
 
-### `flir_real_thermal_yolov8_fine_tuning.py` (Stage 2)
+### `stage_2_training_script.py` (Stage 2)
 | Argument | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
 | `--flir-root` | `str` | `./datasets/FLIR_ADAS` | Path to FLIR ADAS dataset directory |
